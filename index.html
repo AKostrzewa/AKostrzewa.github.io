@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+    <title></title>
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+
+
+    <script src="jquery.js"></script>
+    <script src="script.js"></script>
+    <!-- <link rel="stylesheet" href="//code.jquery.com/mobile/1.5.0-alpha.1/jquery.mobile-1.5.0-alpha.1.min.css"> -->
+    <script type="text/javascript" src="jquery.touchSwipe.min.js"></script>
+    <!-- <script src="//code.jquery.com/mobile/1.5.0-alpha.1/jquery.mobile-1.5.0-alpha.1.min.js"></script> -->
+
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        .carousel_holder {
+            width:90%;
+            margin:0 5%;
+            position: relative;
+        }
+
+        .carousel_holder .carousel_arr {
+            position:absolute;
+            z-index: 2;
+        }
+
+        .carousel_holder .carousel_arr.arr_left {
+            left:0;
+            top:40px;
+        }
+
+        .carousel_holder .carousel_arr.arr_right {
+            right:0;
+            top:40px;
+        }
+
+        .carousel_holder .collections_carousel {
+            overflow: hidden;
+            width:100%;
+        }
+
+        .carousel_holder .collections_carousel > ul {
+            position:relative;
+            left:0;
+            white-space: nowrap;
+            margin: 0 -15px;
+            padding:0;
+        }
+
+        .carousel_holder .collections_carousel > ul > li {
+            display: inline-block;
+            vertical-align: top;
+            width: 20%;
+            padding: 0 15px;
+            white-space: normal;
+            margin-bottom: 0;
+            height:0;
+            padding-bottom:20%;
+        }
+
+        @media only screen and (max-width: 1400px) {
+            .carousel_holder .collections_carousel > ul > li {
+                width: 25%;
+                padding-bottom: 25%;
+            }
+        }
+
+        @media only screen and (max-width: 1100px) {
+            .carousel_holder .collections_carousel > ul > li {
+                width: 33.33%;
+                padding-bottom: 33.33%;
+            }
+        }
+
+        @media only screen and (max-width: 800px) {
+            .carousel_holder .collections_carousel > ul > li {
+                width: 50%;
+                padding-bottom: 50%;
+            }
+        }
+
+        @media only screen and (max-width: 500px) {
+            .carousel_holder .collections_carousel > ul > li {
+                width: 100%;
+                padding-bottom: 100%;
+            }
+        }
+
+        .carousel_holder .collections_carousel > ul > li > div {
+            width:100%;
+            padding-bottom:100%;
+        }
+    </style>
+
+</head>
+<body>
+    <div class="carousel_holder">
+        <button class="carousel_arr arr_left carousel_arrow_left">
+            <span class="sr-only">przesuń w lewo</span>
+        </button>
+        <button class="carousel_arr arr_right carousel_arrow_right">
+            <span class="sr-only">przesuń w prawo</span>
+        </button>
+        <div class="collections_carousel">
+            <ul class="carousel_elements_parent" style="left: 0px;"><li class="carousel_elements">
+                <div style="background-color:#111;"></div>
+            </li><li class="carousel_elements">
+                <div style="background-color:#222;"></div>
+            </li><li class="carousel_elements">
+                <div style="background-color:#333;"></div>
+            </li><li class="carousel_elements">
+                <div style="background-color:#444;"></div>
+            </li><li class="carousel_elements">
+                <div style="background-color:#555;"></div>
+            </li><li class="carousel_elements">
+                <div style="background-color:#666;"></div>
+            </li><li class="carousel_elements">
+                <div style="background-color:#777;"></div>
+            </li><li class="carousel_elements">
+                <div style="background-color:#888;"></div>
+            </li></ul>
+        </div>
+    </div>
+    <script>
+        new _carouselPlugin('carousel_holder', 2);
+    </script>
+</body>
+</html>
